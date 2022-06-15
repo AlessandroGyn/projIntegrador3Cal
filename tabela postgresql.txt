@@ -8,8 +8,8 @@ CREATE TABLE public.barbearia
 (
     id integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
     title character varying(200) COLLATE pg_catalog."default" NOT NULL,
-    b_start timestamp without time zone NOT NULL,
-    b_end timestamp without time zone NOT NULL,
+    start timestamp without time zone NOT NULL,
+    "end" timestamp without time zone NOT NULL,
     CONSTRAINT gm_id_pkey PRIMARY KEY (id)
 )
 
@@ -17,4 +17,3 @@ TABLESPACE pg_default;
 
 ALTER TABLE public.barbearia
     OWNER to postgres;
-
